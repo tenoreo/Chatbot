@@ -1,0 +1,141 @@
+.chatWrapper {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.chatTrigger {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.chatContainer {
+  position: absolute;
+  bottom: 80px;
+  right: 0;
+  width: 350px;
+  height: 500px;
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.chatContainer.closed {
+  opacity: 0;
+  transform: translateY(20px) scale(0.9);
+  pointer-events: none;
+}
+
+.chatHeader {
+  background: var(--color-primary);
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatMessages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+.message {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 14px;
+  border-radius: 15px;
+  max-width: 80%;
+  font-size: 14px;
+  background-color: var(--color-gray-background);
+  color: var(--color-black);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+}
+
+.message span{
+  font-size: 8px;
+  opacity: 0.5;
+}
+
+.user {
+  background: var(--color-primary);
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 0;
+  align-items: flex-start;
+}
+
+.bot {
+  background: #f0f2f5;
+  color: #333;
+  align-self: flex-start;
+  border-bottom-left-radius: 0;
+  align-items: flex-end;
+
+}
+
+.errorMessage{
+  background: #FFEDFA;
+  color: #F37199;
+}
+
+.typing {
+  color: #888;
+  font-style: italic;
+}
+
+.chatInput {
+  border-top: 1px solid #eee;
+  padding: 15px;
+  display: flex;
+}
+
+.chatInput input {
+  color: var(--color-black);
+  flex: 1;
+  border: none;
+  outline: none;
+  font-family: 'Poppins';
+}
+
+.chatInput button {
+  background: none;
+  border: none;
+  color: var(--color-primary);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}

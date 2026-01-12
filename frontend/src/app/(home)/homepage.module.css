@@ -1,0 +1,17 @@
+.mainWrapper {
+  overflow-y: hidden;
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+@media (max-width: 800px) {
+  .mainWrapper {
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+}

@@ -1,0 +1,85 @@
+const stopWords = [
+  "a",
+  "al",
+  "algo",
+  "algunos",
+  "ante",
+  "antes",
+  "como",
+  "con",
+  "contra",
+  "de",
+  "del",
+  "desde",
+  "donde",
+  "durante",
+  "el",
+  "ella",
+  "ellas",
+  "ellos",
+  "en",
+  "entre",
+  "era",
+  "es",
+  "esta",
+  "está",
+  "estas",
+  "este",
+  "estos",
+  "ha",
+  "han",
+  "hasta",
+  "la",
+  "las",
+  "le",
+  "les",
+  "lo",
+  "los",
+  "mas",
+  "más",
+  "me",
+  "mi",
+  "mis",
+  "no",
+  "nos",
+  "nosotros",
+  "o",
+  "os",
+  "para",
+  "pero",
+  "por",
+  "que",
+  "qué",
+  "quien",
+  "quién",
+  "se",
+  "sin",
+  "sobre",
+  "su",
+  "sus",
+  "te",
+  "tu",
+  "tus",
+  "u",
+  "un",
+  "una",
+  "uno",
+  "unos",
+  "unas",
+  "y",
+  "ya",
+];
+
+// Normaliza texto
+const normalizedMessage = (text) => {
+  return text
+    .toLowerCase() // Convierte todo el texto a minúsculas
+    .normalize("NFD") // Normaliza para separar caracteres con acento
+    .replace(/[\u0300-\u036f]/g, "") // Elimina marcas de acentuación
+    .replace(/[^\w\s]/g, "") // Elimina caracteres especiales (como puntuación y símbolos)
+    .split(/\s+/) // Divide el texto en palabras
+    .filter((word) => word !== "" && !stopWords.includes(word)); // Filtra las palabras vacías y stop words
+};
+
+
+export default normalizedMessage;
