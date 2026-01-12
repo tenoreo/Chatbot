@@ -125,15 +125,21 @@ pnpm install
 
 cd ../backend
 pnpm install
-
+```
 
 ## Ejecución
 
 - **Frontend:**
+
+```bash
 pnpm run dev
+```
 
 - **Backend:**
+
+```bash
 pnpm start
+```
 
 ## Endpoints
 
