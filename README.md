@@ -1,5 +1,9 @@
 # Mini Bot Conversacional (Chatbot)
 
+**Nota:** La version final esta en la rama master.
+
+---
+
 Este proyecto es una aplicación **Full Stack** desarrollada para ofrecer respuestas automatizadas a consultas frecuentes de una empresa.
 
 La aplicación está dividida en dos partes:
